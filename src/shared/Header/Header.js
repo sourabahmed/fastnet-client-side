@@ -1,11 +1,12 @@
 import React from 'react';
-import './Header.css'
+import './Header.css';
+import Logo from '../../../src/images/logo.png';
 
 const Header = () => {
     return (
         <nav className="navbar navbar-expand-lg ">
-            <div className="container-fluid">
-                <a className="navbar-brand link-color" href="/">FastNet</a>
+            <div className="container-fluid logo">
+                <img className="img-fluid" src={Logo} alt="" />
                 <button className="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon "></span>
                 </button>
@@ -21,8 +22,13 @@ const Header = () => {
                             <a className="nav-link link-color" href="/">Pricing</a>
                         </li>
                     </ul>
-                    <span className="navbar-text">
-                        Navbar text with an inline element
+                    <span className="navbar-text d-flex">
+                        <div className="dashboard">
+                            <a href="/">Dashboard</a>
+                        </div>
+                        <div className="login">
+                            <a href="/">Log in <i className="fas fa-sign-in-alt"></i></a>
+                        </div>
                     </span>
                 </div>
             </div>
