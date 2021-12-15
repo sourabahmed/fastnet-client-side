@@ -1,0 +1,32 @@
+.progress-bar{
+    height: 170px;
+    width: 170px;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+}
+.services{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    margin: 40px;
+}
+.service{
+    border: 1px solid #dacaca;
+    padding: 50px 20px;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+}
+.promo{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: rgb(29, 192, 29);
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+@media only screen and (max-width:668px){
+    .services{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
