@@ -1,0 +1,43 @@
+
+.check{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: rgb(31, 16, 16);
+    padding: 90px 25px;
+    color: white;
+    text-align: left;
+}
+.check-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.check-input input[type="email"]{
+    padding: 20px;
+    width: 90%;
+    border-radius: 50px;
+    outline-style: none;
+    border: none;
+}
+
+.check-input input[type="button"]{
+    margin-left: -136px;
+    padding: 15px 25px;
+    border-radius: 50px;
+    border: none;
+    color: rgb(255, 255, 255);
+    background-color: red;
+}
+
+@media only screen and (max-width:668px){
+    .check{
+        grid-template-columns: repeat(1, 1fr);
+        text-align: left;
+    }
+    .check-input{
+        margin-top: 35px;
+    }
+    .check-input input[type="email"]{
+        width: 100%;
+    }
+}

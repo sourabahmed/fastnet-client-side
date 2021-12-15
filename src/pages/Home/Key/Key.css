@@ -1,0 +1,19 @@
+
+.key{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin: 50px 20px;
+    text-align: center;
+}
+.key-value h5{
+    font-weight: bold;
+}
+
+@media only screen and (max-width:668px) {
+    .key{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .key-value{
+        margin: 20px;
+    }
+}
