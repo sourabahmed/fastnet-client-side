@@ -1,0 +1,32 @@
+
+.features-title h1,h4{
+    font-weight: bolder;
+}
+.features-item h2{
+    font-weight: 600;
+}
+.features{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.features-item{
+    border: 1px solid rgb(238, 228, 228);
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+}
+.features-item:hover{
+    background-color: #e91a2fe8;
+    color: rgb(245, 237, 237);
+    transform: scale(1.1);
+    transition: 0.7s;
+    
+}
+
+@media only screen and (max-width:668px){
+    .features{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
