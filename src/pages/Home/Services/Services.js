@@ -9,7 +9,7 @@ const Services = () => {
     const percentage = 60;
     return (
         <div>
-            <div className="text-center">
+            <div className="text-center mt-5">
                 <h5>FastNet pricing</h5>
                 <h2>Discover Our Best Plans</h2>
             </div>
@@ -20,7 +20,7 @@ const Services = () => {
                     <div className="progress-bar">
                         <CircularProgressbar
                             value={percentage}
-                            text={`${percentage}%`}
+                            text={`${percentage} Mbps`}
                             styles={buildStyles({
                                 rotation: 0,
                                 strokeLinecap: 'butt',
@@ -33,19 +33,22 @@ const Services = () => {
                             })}
                         />
                     </div>
-                    <div>
-                        <h3>Internet</h3>
+                    <div className="internet">
+                        <span>Internet </span>
+                        <span>+ TV</span>
+                        <span>+ Phone</span>
                     </div>
-                    <div>
-                        <h6>Home Broadband</h6>
-                        <h6>Cell Phone Connection</h6>
-                        <h6>Home Security</h6>
-                        <h6>99% Internet Uptime</h6>
+                    <div className="benifit">
+                        <h6><i className="service-icon fas fa-check-circle"></i> Home Broadband</h6>
+                        <h6><i className="service-icon fas fa-check-circle"></i> Cell Phone Connection</h6>
+                        <h6><i className="service-icon fas fa-check-circle"></i> Home Security</h6>
+                        <h6><i className="service-icon fas fa-check-circle"></i> 99% Internet Uptime</h6>
                     </div>
-                    <div>
-                        <h4>$24.00/month</h4>
+                    <div className="price">
+                        <h5><span>$24.00 </span>/Month</h5>
+                        
                     </div>
-                    <div>
+                    <div className="service-button">
                         <a href="/">Purchase Now</a>
                     </div>
                 </div>

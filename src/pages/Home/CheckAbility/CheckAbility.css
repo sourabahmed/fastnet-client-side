@@ -26,7 +26,7 @@
     border-radius: 50px;
     border: none;
     color: rgb(255, 255, 255);
-    background-color: red;
+    background-color: #e91a2fe8;
 }
 
 @media only screen and (max-width:668px){

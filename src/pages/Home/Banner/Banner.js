@@ -16,16 +16,16 @@ const Banner = () => {
                 </div>
                 <div className="banner-text">
                     <div>
-                        <h5> <i className="fas fa-check-square"></i> Home Broadband</h5>
-                        <h5> <i className="fas fa-check-square"></i> Cell Phone Connection</h5>
-                        <h5> <i className="fas fa-check-square"></i> Home Security</h5>
-                        <h5> <i className="fas fa-check-square"></i> 99% Internet Uptime</h5>
+                        <h5> <i class="fas fa-check-circle"></i> Home Broadband</h5>
+                        <h5> <i class="fas fa-check-circle"></i> Cell Phone Connection</h5>
+                        <h5> <i class="fas fa-check-circle"></i> Home Security</h5>
+                        <h5> <i class="fas fa-check-circle"></i> 99% Internet Uptime</h5>
                     </div>
                     <div className="ms-lg-5 ms-sm-0">
-                        <h5> <i className="fas fa-check-square"></i> Download 1Gbps</h5>
-                        <h5> <i className="fas fa-check-square"></i> FastNet TV Box</h5>
-                        <h5> <i className="fas fa-check-square"></i> Mobile Connection</h5>
-                        <h5> <i className="fas fa-check-square"></i> 24/7 Customer Support</h5>
+                        <h5> <i class="fas fa-check-circle"></i> Download 1Gbps</h5>
+                        <h5> <i class="fas fa-check-circle"></i> FastNet TV Box</h5>
+                        <h5> <i class="fas fa-check-circle"></i> Mobile Connection</h5>
+                        <h5> <i class="fas fa-check-circle"></i> 24/7 Customer Support</h5>
                     </div>
                 </div>
                 <div className="mt-5">

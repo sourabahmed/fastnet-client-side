@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../../../shared/Footer/Footer';
 import About from '../About/About';
 import Banner from '../Banner/Banner';
 import CheckAbility from '../CheckAbility/CheckAbility';
@@ -16,6 +17,7 @@ const Home = () => {
             <Key></Key>
             <CheckAbility></CheckAbility>
             <Services></Services>
+            <Footer></Footer>
         </div>
     );
 };

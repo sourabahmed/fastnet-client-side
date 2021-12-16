@@ -9,7 +9,7 @@ const CheckAbility = () => {
                 <h1>Check Ability To Connect Our <br /> Services In Your Area</h1>
             </div>
             <div className=" check-input">
-                <input type="email" name="" id="" />
+                <input type="email" name="" id="" placeholder="Write your Email"/>
                 <input type="button" value="Check Now" />
             </div>
         </div>
