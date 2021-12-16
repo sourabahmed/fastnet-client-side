@@ -5,6 +5,7 @@ import Banner from '../Banner/Banner';
 import CheckAbility from '../CheckAbility/CheckAbility';
 import Features from '../Features/Features';
 import Key from '../Key/Key';
+import ServiceDetails from '../ServiceDetails/ServiceDetails';
 import Services from '../Services/Services';
 
 const Home = () => {
@@ -18,6 +19,7 @@ const Home = () => {
             <CheckAbility></CheckAbility>
             <Services></Services>
             <Footer></Footer>
+            <ServiceDetails></ServiceDetails>
         </div>
     );
 };

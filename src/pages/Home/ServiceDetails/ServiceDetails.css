@@ -1,0 +1,135 @@
+/* service section style */
+.service-details{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.progress-bar{
+    height: 170px;
+    width: 170px;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+}
+.detail-service{
+    border: 1px solid #dacaca;
+    padding: 50px 20px;
+    border-radius: 20px;
+    margin: 50px 100px;
+    text-align: center;
+    position: relative;
+}
+.promo{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: rgb(29, 192, 29);
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: white;
+    font-weight: bold;
+}
+.internet{
+    margin-top: 40px;
+}
+.internet span{
+    font-size: 25px;
+    font-weight: bolder;
+}
+.benifited{
+    margin-top: 30px;
+}
+.benifited h6{
+    font-size: 20px;
+    font-weight: 300;
+    text-align: left;
+    margin-left: 100px;
+}
+.price{
+    margin-top: 30px;
+}
+.price h5 span{
+    font-size: 40px;
+    font-weight: bolder;
+}
+.service-icon{
+    color: #e91a2fe8;
+}
+.service-button a{
+    background-color: #e91a2fe8;
+    display: inline-block;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    padding: 15px 50px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+/* service section style end */
+
+/* form section style */
+
+.details-card {
+    border: none;
+    height: 320px;
+    margin-top: 200px;
+}
+
+.form-input {
+    position: relative
+}
+
+.form-input span {
+    position: absolute;
+    top: -18px;
+    left: 10px;
+    background-color: #fff;
+    padding: 5px 10px;
+    font-size: 15px
+}
+
+.form-input input {
+    height: 50px;
+    width: 100%;
+    border: 2px solid #f0baba
+}
+
+.form-input input:focus {
+    box-shadow: none;
+    outline: none;
+    border: 2px solid #e91a2fe8;
+}
+
+.order-button{
+    height: 50px;
+    background-color: #e91a2fe8;
+    color: white;
+    font-weight: 400;
+    border: none;
+}
+
+.success-data {
+    display: flex;
+    flex-direction: column
+}
+
+
+/* form section style end*/
+
+
+@media only screen and (max-width:668px){
+    .benifited h6{
+        text-align: center;
+        margin-left: 0px;
+    }
+    .order-button a{
+        padding: 15px 30px;
+    }
+
+    .service-details{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .detail-service{
+        margin: 20px;
+    }
+}
