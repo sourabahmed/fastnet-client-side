@@ -1,0 +1,49 @@
+/* div{
+    background-color: red;
+} */
+.card {
+    border: none;
+    height: 320px
+}
+
+.forms-inputs {
+    position: relative
+}
+
+.forms-inputs span {
+    position: absolute;
+    top: -18px;
+    left: 10px;
+    background-color: #fff;
+    padding: 5px 10px;
+    font-size: 15px
+}
+
+.forms-inputs input {
+    height: 50px;
+    width: 100%;
+    border: 2px solid #f0baba
+}
+
+.forms-inputs input:focus {
+    box-shadow: none;
+    outline: none;
+    border: 2px solid #e91a2fe8;
+}
+
+.login-button{
+    height: 50px;
+    background-color: #e91a2fe8;
+    color: white;
+    font-weight: 400;
+    border: none;
+}
+
+.success-data {
+    display: flex;
+    flex-direction: column
+}
+
+.bxs-badge-check {
+    font-size: 90px
+}
