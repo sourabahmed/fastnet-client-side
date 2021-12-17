@@ -1,11 +1,17 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
-import useFirebase from '../../../hooks/useFirebase';
 
 const PrivateRoute = ({ children }) => {
-    const{user} = useAuth();
-    console.log(user);
+    const { user, isLoading } = useAuth();
+
+    if (isLoading) {
+        return (
+            <div className="spinner-border m-5" role="status">
+                <span className="visually-hidden">Loading...</span>
+            </div>
+        );
+    }
 
     return (
         <div>

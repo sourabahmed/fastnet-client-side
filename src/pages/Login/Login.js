@@ -3,7 +3,6 @@ import Header from '../../shared/Header/Header';
 import './Login.css';
 import { useForm } from "react-hook-form";
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import useFirebase from '../../hooks/useFirebase';
 import useAuth from '../../hooks/useAuth';
 
 const Login = () => {
@@ -30,7 +29,7 @@ const Login = () => {
                                     <div className="forms-inputs mb-4"> <span>Password</span> <input type="password" {...register("password")} />
                                         <div className="invalid-feedback">Password must be 8 character!</div>
                                     </div>
-                                    <div className="mb-3"> <input className="login-button w-100" type="submit" /> </div>
+                                    <div className="mb-3"> <input className="login-button w-100" type="submit" value="Login"/> </div>
                                 </div>
                                 <div className="success-data">
                                     <Link to="/signin" className="text-center">New user! Please Sign in</Link>

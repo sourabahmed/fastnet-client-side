@@ -3,9 +3,10 @@ import './Service.css'
 
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+import { Link } from 'react-router-dom';
 
 const Service = (props) => {
-    const {netSpeed, platform, price} = props.service;
+    const {netSpeed, platform, price, _id} = props.service;
 
     return (
         <div className="service">
@@ -40,7 +41,7 @@ const Service = (props) => {
 
             </div>
             <div className="service-button">
-                <a href="/">Purchase Now</a>
+                <Link to={`/servicedetails/${_id}`}>Purchase Now</Link>
             </div>
         </div>
     );

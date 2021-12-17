@@ -25,7 +25,7 @@ function App() {
             <Route path="signin" element={<Signin />} />
             {/* <Route path="servicedetails" element={<ServiceDetails />} /> */}
             <Route
-              path="/servicedetails"
+              path="/servicedetails/:serviceId"
               element={
                 <PrivateRoute>
                   <ServiceDetails />

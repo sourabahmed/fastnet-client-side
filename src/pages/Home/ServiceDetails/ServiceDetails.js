@@ -1,15 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './ServiceDetails.css'
 
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import Header from '../../../shared/Header/Header';
+import useAuth from '../../../hooks/useAuth';
 
 const ServiceDetails = () => {
+    const {user} = useAuth();
+
     const { register, handleSubmit } = useForm();
     const onSubmit = data => console.log(data);
+
+    const [service, setService] = useState();
+    const {serviceId} = useParams();
+    console.log(service);
+    useEffect(() => {
+        fetch(`http://localhost:5000/singleService/${serviceId}`)
+            .then(res => res.json())
+            .then(data => setService(data));
+    }, [])
     return (
         <div className="">
             <Header></Header>
@@ -18,8 +30,8 @@ const ServiceDetails = () => {
                     <span className="promo">Promo</span>
                     <div className="progress-bar">
                         <CircularProgressbar
-                            value={60}
-                            text={`${60} Mbps`}
+                            value={service?.netSpeed}
+                            text={`${service?.netSpeed} Mbps`}
                             styles={buildStyles({
                                 rotation: 0,
                                 strokeLinecap: 'butt',
@@ -33,7 +45,7 @@ const ServiceDetails = () => {
                         />
                     </div>
                     <div className="internet">
-                        <span>Internet</span>
+                        <span>{service?.platform}</span>
                     </div>
                     <div className="benifited">
                         <h6><i className="service-icon fas fa-check-circle"></i> Home Broadband</h6>
@@ -42,7 +54,7 @@ const ServiceDetails = () => {
                         <h6><i className="service-icon fas fa-check-circle"></i> 99% Internet Uptime</h6>
                     </div>
                     <div className="price">
-                        <h5><span>$24.00 </span>/Month</h5>
+                        <h5><span>${service?.price} </span>/Month</h5>
 
                     </div>
                     <div className="service-button">
@@ -56,16 +68,16 @@ const ServiceDetails = () => {
                                 <div className="col-md-6">
                                     <div className="details-card " id="form1">
                                         <div className="form-data">
-                                            <div className="form-input mb-4"> <span>Full Name</span> <input type="text" {...register("fullname")} />
+                                            <div className="form-input mb-4"> <span>Full Name</span> <input type="text" {...register("name")} defaultValue={user.displayName}/>
                                                 <div className="invalid-feedback">A valid email is required!</div>
                                             </div>
-                                            <div className="form-input mb-4"> <span>Email Address</span> <input type="email" {...register("email")} />
+                                            <div className="form-input mb-4"> <span>Email Address</span> <input type="email" {...register("email")} defaultValue={user.email}/>
                                                 <div className="invalid-feedback">Password must be 8 character!</div>
                                             </div>
-                                            <div className="form-input mb-4"> <span>Password</span> <input type="password" {...register("password")} />
+                                            <div className="form-input mb-4"> <span>Price</span> <input type="text" {...register("price")} defaultValue={service?.price}/>
                                                 <div className="invalid-feedback">Password must be 8 character!</div>
                                             </div>
-                                            <div className="form-input mb-4"> <span>Re-Enter Password</span> <input type="password" {...register("password2")} />
+                                            <div className="form-input mb-4"> <span>Mobile Number</span> <input type="text" {...register("number")} />
                                                 <div className="invalid-feedback">Password must be 8 character!</div>
                                             </div>
                                             <div className="mb-3"> <input className="login-button w-100" type="submit" /> </div>
