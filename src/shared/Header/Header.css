@@ -15,9 +15,9 @@
 .dashboard a:hover{
     color: #7c0511e8;
 }
-.dashboard a,span{
+.dashboard h5{
     margin-right: 50px;
-    color: #b30303;
+    color: #066325;
     font-size: 20px;
     font-weight: 600;
     text-decoration: none;
@@ -32,10 +32,9 @@
     border-radius: 30px;
 }
 .logout-btn{
-    text-decoration: none;
     color: white;
     background: #e91a2fe8;
-    padding: 10px 30px;
+    padding: 12px 30px;
     font-size: 20px;
     font-weight: 400;
     border-radius: 30px;

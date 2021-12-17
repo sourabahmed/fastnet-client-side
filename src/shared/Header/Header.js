@@ -6,7 +6,8 @@ import useFirebase from '../../hooks/useFirebase';
 
 const Header = () => {
     const{user, logOut} = useFirebase();
-    console.log(user)
+ 
+
     return (
         <nav className="navbar navbar-expand-lg ">
             <div className="container-fluid logo">
@@ -20,7 +21,7 @@ const Header = () => {
                             <Link to="/home" className="nav-link active link-color" aria-current="page">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/servicedetails" className="nav-link link-color">DetailsService</Link>
+                            <Link to="/servicedetails" className="nav-link link-color">ServiceDetails</Link>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link link-color" href="/">Dashboard</a>
@@ -28,7 +29,7 @@ const Header = () => {
                     </ul>
                     <div className="navbar-text d-flex align-items-center">
                         <div className="dashboard">
-                            <span>{user.email? user.displayName: ""}</span>
+                            <h5>{user.email? user.displayName: ""}</h5>
                         </div>
                         <div className="login">
                             {
