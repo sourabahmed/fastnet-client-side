@@ -2,11 +2,21 @@ import React from 'react';
 import Header from '../../shared/Header/Header';
 import './Signin.css';
 import { useForm } from "react-hook-form";
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import useFirebase from '../../hooks/useFirebase';
 
 const Signin = () => {
+    const {registerUser} = useFirebase();
+
+    const location = useLocation();
+    const navigate = useNavigate();
     const { register, handleSubmit } = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = data => {
+        if (data.password !== data.password2) {
+            alert('passwords does not matched')
+        }
+        registerUser(data.name, data.email, data.password, navigate, location)
+    };
     return (
         <div>
             <form onSubmit={handleSubmit(onSubmit)}>
@@ -16,7 +26,7 @@ const Signin = () => {
                         <div className="col-md-6">
                             <div className="card px-5 py-5" id="form1">
                                 <div className="form-data" v-if="!submitted">
-                                    <div className="forms-inputs mb-4"> <span>Full Name</span> <input type="text" {...register("fullname")} />
+                                    <div className="forms-inputs mb-4"> <span>Full Name</span> <input type="text" {...register("name")} />
                                         <div className="invalid-feedback">A valid email is required!</div>
                                     </div>
                                     <div className="forms-inputs mb-4"> <span>Email Address</span> <input type="email" {...register("email")} />

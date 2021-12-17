@@ -5,13 +5,15 @@ import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import { Link } from 'react-router-dom';
 import { useForm } from "react-hook-form";
+import Header from '../../../shared/Header/Header';
 
 const ServiceDetails = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => console.log(data);
     return (
-        <div className="m-sm-1 m-lg-5">
-            <div className="service-details">
+        <div className="">
+            <Header></Header>
+            <div className="service-details m-sm-1 m-lg-5">
                 <div className="detail-service">
                     <span className="promo">Promo</span>
                     <div className="progress-bar">

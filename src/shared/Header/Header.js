@@ -2,13 +2,16 @@ import React from 'react';
 import './Header.css';
 import Logo from '../../../src/images/logo.png';
 import { Link } from 'react-router-dom';
+import useFirebase from '../../hooks/useFirebase';
 
 const Header = () => {
+    const{user, logOut} = useFirebase();
+    console.log(user)
     return (
         <nav className="navbar navbar-expand-lg ">
             <div className="container-fluid logo">
                 <img className="img-fluid" src={Logo} alt="" />
-                <button className="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <button className="navbar-toggler navbar-light " type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon "></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarText">
@@ -17,20 +20,23 @@ const Header = () => {
                             <Link to="/home" className="nav-link active link-color" aria-current="page">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link link-color" href="/">Features</a>
+                            <Link to="/servicedetails" className="nav-link link-color">DetailsService</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link link-color" href="/">Pricing</a>
+                            <a className="nav-link link-color" href="/">Dashboard</a>
                         </li>
                     </ul>
-                    <span className="navbar-text d-flex">
+                    <div className="navbar-text d-flex align-items-center">
                         <div className="dashboard">
-                            <a href="/">Dashboard</a>
+                            <span>{user.email? user.displayName: ""}</span>
                         </div>
                         <div className="login">
-                            <Link to="/login">Log in <i className="fas fa-sign-in-alt"></i></Link>
+                            {
+                                user.email? <button onClick={() => logOut()} className="logout-btn">Logout<i className="fas fa-sign-in-alt"></i></button>:
+                                <Link to="/login">Login <i className="fas fa-sign-in-alt"></i></Link>
+                            }
                         </div>
-                    </span>
+                    </div>
                 </div>
             </div>
         </nav>
