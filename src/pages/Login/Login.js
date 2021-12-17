@@ -4,9 +4,10 @@ import './Login.css';
 import { useForm } from "react-hook-form";
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import useFirebase from '../../hooks/useFirebase';
+import useAuth from '../../hooks/useAuth';
 
 const Login = () => {
-    const {logInUser} = useFirebase();
+    const {logInUser} = useAuth();
 
     const location = useLocation();
     const navigate = useNavigate();

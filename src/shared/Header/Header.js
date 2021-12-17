@@ -2,10 +2,10 @@ import React from 'react';
 import './Header.css';
 import Logo from '../../../src/images/logo.png';
 import { Link } from 'react-router-dom';
-import useFirebase from '../../hooks/useFirebase';
+import useAuth from '../../hooks/useAuth';
 
 const Header = () => {
-    const{user, logOut} = useFirebase();
+    const{user, logOut} = useAuth();
  
 
     return (
