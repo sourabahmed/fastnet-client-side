@@ -1,29 +1,33 @@
 import React from 'react';
-import Payment from '../../../Payment/Payment';
+import { Link } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 
-const Dashboard = () => {
+
+const DashboardHome = () => {
+    const { user, logOut } = useAuth();
     return (
         <div>
             <nav class="navbar navbar-light bg-light">
                 <div class="container-fluid">
-                    <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-                        Link with href
+                    <a class="btn btn-danger" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                        Dashboard
                     </a>
                 </div>
             </nav>
-            <Payment></Payment>
             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Dashboard</h5>
                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
                     <div>
-                        Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+                        <h3>{user.displayName}</h3>
+                        <h6>{user.email}</h6>
+                        <button onClick={logOut} className="btn btn-danger">Logout</button>
                     </div>
                     <div class="dropdown mt-3">
-                        <a class="dropdown-item" href="/dashboard/payment">Action</a>
-                        <a class="dropdown-item" href="/">Another action</a>
+                        <Link class="dropdown-item" to="/dashboard/payment">Payment</Link>
+                        <Link class="dropdown-item" to="/dashboard/myorders">My orders</Link>
                         <a class="dropdown-item" href="/">Something else here</a>
                     </div>
                 </div>
@@ -32,4 +36,4 @@ const Dashboard = () => {
     );
 };
 
-export default Dashboard;
+export default DashboardHome;
