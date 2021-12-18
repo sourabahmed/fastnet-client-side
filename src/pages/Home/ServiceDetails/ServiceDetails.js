@@ -11,9 +11,6 @@ import useAuth from '../../../hooks/useAuth';
 const ServiceDetails = () => {
     const {user} = useAuth();
 
-    const { register, handleSubmit } = useForm();
-    const onSubmit = data => console.log(data);
-
     const [service, setService] = useState();
     const {serviceId} = useParams();
     console.log(service);
@@ -22,6 +19,25 @@ const ServiceDetails = () => {
             .then(res => res.json())
             .then(data => setService(data));
     }, [])
+
+    const { register, handleSubmit } = useForm();
+    const onSubmit = data => {
+        fetch('http://localhost:5000/orders', {
+            method: 'POST',
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(res => res.json())
+        .then(data => {
+            if(data.acknowledged){
+                alert('Package Purchased')
+            }
+        })
+    }
+
+
     return (
         <div className="">
             <Header></Header>
@@ -80,7 +96,7 @@ const ServiceDetails = () => {
                                             <div className="form-input mb-4"> <span>Mobile Number</span> <input type="text" {...register("number")} />
                                                 <div className="invalid-feedback">Password must be 8 character!</div>
                                             </div>
-                                            <div className="mb-3"> <input className="login-button w-100" type="submit" /> </div>
+                                            <div className="mb-3"> <input className="login-button w-100" type="submit" value="Purchase"/> </div>
                                         </div>
                                     </div>
                                 </div>

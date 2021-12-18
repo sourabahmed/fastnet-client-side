@@ -24,7 +24,9 @@ const Header = () => {
                             <Link to="/servicedetails" className="nav-link link-color">ServiceDetails</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link link-color" href="/">Dashboard</a>
+                            {
+                                user.email? <Link to="dashboard" className="nav-link link-color">Dashboard</Link>: " "
+                            }
                         </li>
                     </ul>
                     <div className="navbar-text d-flex align-items-center">
