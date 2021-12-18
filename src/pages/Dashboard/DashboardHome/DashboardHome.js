@@ -7,28 +7,28 @@ const DashboardHome = () => {
     const { user, logOut } = useAuth();
     return (
         <div>
-            <nav class="navbar navbar-light bg-light">
-                <div class="container-fluid">
-                    <a class="btn btn-danger" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+            <nav className="navbar navbar-light bg-light">
+                <div className="container-fluid">
+                    <a className="btn btn-danger" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
                         Dashboard
                     </a>
                 </div>
             </nav>
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Dashboard</h5>
-                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <div className="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div className="offcanvas-header">
+                    <h5 className="offcanvas-title" id="offcanvasExampleLabel">Dashboard</h5>
+                    <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body">
+                <div className="offcanvas-body">
                     <div>
                         <h3>{user.displayName}</h3>
                         <h6>{user.email}</h6>
                         <button onClick={logOut} className="btn btn-danger">Logout</button>
                     </div>
-                    <div class="dropdown mt-3">
-                        <Link class="dropdown-item" to="/dashboard/payment">Payment</Link>
-                        <Link class="dropdown-item" to="/dashboard/myorders">My orders</Link>
-                        <a class="dropdown-item" href="/">Something else here</a>
+                    <div className="dropdown mt-3">
+                        <Link className="dropdown-item" to="/dashboard/payment">Payment</Link>
+                        <Link className="dropdown-item" to="/dashboard/myorders">My orders</Link>
+                        <a className="dropdown-item" href="/">Something else here</a>
                     </div>
                 </div>
             </div>
