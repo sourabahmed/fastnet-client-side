@@ -17,6 +17,7 @@ import Dashboard from './pages/Dashboard/Dashboard/Dashboard';
 import Payment from './pages/Dashboard/Payment/Payment';
 import MyOrders from './pages/Dashboard/MyOrders/MyOrders';
 import ManageOrders from './pages/Dashboard/ManageOrders/ManageOrders';
+import Admin from './pages/Dashboard/Admin/Admin';
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
               <Route path="payment" element={<Payment />} />
               <Route path="myorders" element={<MyOrders />} />
               <Route path="manageorders" element={<ManageOrders />} />
+              <Route path="admin" element={<Admin />} />
             </Route>
 
             <Route path="*" element={<NotFound />} />

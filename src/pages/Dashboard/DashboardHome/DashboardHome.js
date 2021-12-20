@@ -32,6 +32,9 @@ const DashboardHome = () => {
                         {
                             admin && <Link className="dropdown-item" to="/dashboard/manageorders">Manage orders</Link>
                         }
+                        {
+                            admin && <Link className="dropdown-item" to="/dashboard/admin">Make Admin</Link>
+                        }
                     </div>
                 </div>
             </div>
