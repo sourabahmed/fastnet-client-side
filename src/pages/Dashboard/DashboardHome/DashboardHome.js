@@ -4,7 +4,7 @@ import useAuth from '../../../hooks/useAuth';
 
 
 const DashboardHome = () => {
-    const { user, logOut } = useAuth();
+    const { user, logOut, admin } = useAuth();
     return (
         <div>
             <nav className="navbar navbar-light bg-light">
@@ -12,6 +12,7 @@ const DashboardHome = () => {
                     <a className="btn btn-danger" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
                         Dashboard
                     </a>
+                    <Link to="/home"><button className="btn btn-danger">Home</button></Link>
                 </div>
             </nav>
             <div className="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
@@ -27,8 +28,10 @@ const DashboardHome = () => {
                     </div>
                     <div className="dropdown mt-3">
                         <Link className="dropdown-item" to="/dashboard/payment">Payment</Link>
-                        <Link className="dropdown-item" to="/dashboard/myorders">My orders</Link>
-                        <a className="dropdown-item" href="/">Something else here</a>
+                        <Link className="dropdown-item" to="/dashboard/myorders">MyOrders</Link>
+                        {
+                            admin && <Link className="dropdown-item" to="/dashboard/manageorders">Manage orders</Link>
+                        }
                     </div>
                 </div>
             </div>

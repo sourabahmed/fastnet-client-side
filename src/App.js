@@ -16,6 +16,7 @@ import AuthProvider from './context/AuthContext';
 import Dashboard from './pages/Dashboard/Dashboard/Dashboard';
 import Payment from './pages/Dashboard/Payment/Payment';
 import MyOrders from './pages/Dashboard/MyOrders/MyOrders';
+import ManageOrders from './pages/Dashboard/ManageOrders/ManageOrders';
 
 function App() {
   return (
@@ -23,11 +24,12 @@ function App() {
       <AuthProvider>
         <BrowserRouter>
           <Routes>
-            <Route exact path="/" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="home" element={<Home />} />
             <Route path="login" element={<Login />} />
             <Route path="signin" element={<Signin />} />
-            {/* <Route path="servicedetails" element={<ServiceDetails />} /> */}
+            <Route path="dashboard" element={<Dashboard />} />
+           
             <Route
               path="/servicedetails/:serviceId"
               element={
@@ -37,14 +39,15 @@ function App() {
               }
             />
 
-            <Route path="dashboard" element={<Dashboard />} />
+            
 
             <Route path="dashboard" element={<Dashboard />}>
               <Route path="payment" element={<Payment />} />
               <Route path="myorders" element={<MyOrders />} />
+              <Route path="manageorders" element={<ManageOrders />} />
             </Route>
 
-            <Route exact path="*" element={<NotFound />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
       </AuthProvider>

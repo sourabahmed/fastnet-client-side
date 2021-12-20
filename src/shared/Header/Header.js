@@ -25,7 +25,7 @@ const Header = () => {
                         </li>
                         <li className="nav-item">
                             {
-                                user.email? <Link to="dashboard" className="nav-link link-color">Dashboard</Link>: " "
+                                user.email? <Link to="/dashboard" className="nav-link link-color">Dashboard</Link>: " "
                             }
                         </li>
                     </ul>

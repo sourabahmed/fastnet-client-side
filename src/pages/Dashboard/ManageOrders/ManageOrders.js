@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import useAuth from '../../../hooks/useAuth';
 
-const MyOrders = () => {
-    const { user } = useAuth();
+const ManageOrders = () => {
+
     const [orders, setOrders] = useState([]);
     const [isDeleted, setIsDeleted] = useState(false);
 
@@ -46,7 +45,7 @@ const MyOrders = () => {
                 </thead>
                 <tbody>
                     {
-                        orders.filter(data => data?.email === user?.email).map(order =>
+                        orders.map(order =>
                             <tr key={order._id}>
                                 <td>{order.indexOf}</td>
                                 <td>{order.name}</td>
@@ -61,4 +60,4 @@ const MyOrders = () => {
         </div>
     );
 };
-export default MyOrders;
+export default ManageOrders;
