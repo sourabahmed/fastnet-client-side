@@ -7,7 +7,7 @@ const MyOrders = () => {
     const [isDeleted, setIsDeleted] = useState(false);
 
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://shielded-ravine-12635.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [isDeleted])
@@ -15,7 +15,7 @@ const MyOrders = () => {
     const handleDeleteOrder = id => {
         const sure = window.confirm('are you sure you want to delte this order')
         if (sure) {
-            fetch(`http://localhost:5000/deleteOrder/${id}`, {
+            fetch(`https://shielded-ravine-12635.herokuapp.com/deleteOrder/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json'

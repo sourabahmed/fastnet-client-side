@@ -15,14 +15,14 @@ const ServiceDetails = () => {
     const {serviceId} = useParams();
     console.log(service);
     useEffect(() => {
-        fetch(`http://localhost:5000/singleService/${serviceId}`)
+        fetch(`https://shielded-ravine-12635.herokuapp.com/singleService/${serviceId}`)
             .then(res => res.json())
             .then(data => setService(data));
     }, [])
 
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:5000/orders', {
+        fetch('https://shielded-ravine-12635.herokuapp.com/orders', {
             method: 'POST',
             headers:{
                 'Content-Type': 'application/json'
