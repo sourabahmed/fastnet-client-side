@@ -37,7 +37,7 @@ const ManageOrders = () => {
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
+                        {/* <th scope="col">#</th> */}
                         <th scope="col">Name</th>
                         <th scope="col">Email</th>
                         <th scope="col">Price</th>
@@ -47,7 +47,6 @@ const ManageOrders = () => {
                     {
                         orders.map(order =>
                             <tr key={order._id}>
-                                <td>{order.indexOf}</td>
                                 <td>{order.name}</td>
                                 <td>{order.email}</td>
                                 <td>{order.price}</td>

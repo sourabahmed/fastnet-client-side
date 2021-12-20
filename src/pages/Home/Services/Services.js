@@ -11,7 +11,7 @@ const Services = () => {
        .then(data => setServices(data))
    },[])
     return (
-        <div>
+        <div id="services">
             <div className="text-center mt-5 text-bold">
                 <h4>Evernet ISP Features</h4>
                 <h1>We Are Internet Service <br /> Provider Company</h1>

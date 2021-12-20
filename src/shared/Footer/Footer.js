@@ -6,7 +6,7 @@ const Footer = () => {
         <div>
             <div className="footer">
                 <div className="footer-property">
-                    <h2>Glassy Mart</h2>
+                    <h2>FastNet</h2>
                     <p>We are one of the best service provider in Bangladesh.</p>
                     <h3>Follew us</h3>
                     <div className="fs-1">
@@ -18,7 +18,7 @@ const Footer = () => {
                 <div className="footer-property">
                     <h2>Contact us</h2>
                     <h6>Phone: 01777775555</h6>
-                    <h6>Email: glassy@gmail.com</h6>
+                    <h6>Email: fastnet@gmail.com</h6>
                     <h6>Location: 45/3, Dhaka, Bd</h6>
                 </div>
                 <div className="footer-property">
