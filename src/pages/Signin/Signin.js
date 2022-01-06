@@ -18,7 +18,7 @@ const Signin = () => {
         registerUser(data.name, data.email, data.password, navigate, location)
     };
     return (
-        <div>
+        <div className="signin-main">
             <form onSubmit={handleSubmit(onSubmit)}>
                 <Header></Header>
                 <div className="container mt-5 ">
@@ -42,7 +42,7 @@ const Signin = () => {
                                 </div>
                                 <div className="success-data">
                                     <Link to="/login" className="text-center">Have an Account! Please Login</Link>
-                                    <div className="text-center d-flex flex-column"> <i className='bx bxs-badge-check'></i> <span className="text-center fs-1">Sign In With Google</span> </div>
+                                    <div className="mt-2"> <button className="login-button w-100 fs-3"> <i className="fab fa-google"></i> Signin with Google </button></div>
                                 </div>
                             </div>
                         </div>

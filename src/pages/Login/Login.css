@@ -1,11 +1,14 @@
-/* div{
-    background-color: red;
-} */
-.card {
-    border: none;
-    height: 320px
-}
 
+.login-main{
+    background: linear-gradient(rgba(37, 36, 36, 0.418), rgba(0, 0, 0, 0.418)), url("../../images/login.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 50vh;
+}
+.card{
+    border: 1px solid red;
+}
 .forms-inputs {
     position: relative
 }
