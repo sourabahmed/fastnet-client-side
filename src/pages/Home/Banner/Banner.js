@@ -29,7 +29,7 @@ const Banner = () => {
                     </div>
                 </div>
                 <div className="mt-5">
-                    <button className="banner-button">Our Services</button>
+                    <a href="#services" className="banner-button text-decoration-none text-light">Our Services</a>
                     {/* <button className="banner-button ms-4">Contact us</button> */}
                 </div>
             </div>
