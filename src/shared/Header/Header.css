@@ -1,23 +1,24 @@
 
 .logo img{
     height: 50px;
-    width: 60px;
+    width: auto;
     border-radius: 5px;
 }
 .link-color{
-    color: #b30303;
+    color: #fdfdfd;
     font-size: 20px;
     font-weight: 600;
 }
 .link-color:hover{
-    color: #7c0511e8;
+    color: #f3e6e7e8;
+    border-bottom: 1px solid white;
 }
 .dashboard a:hover{
     color: #7c0511e8;
 }
-.dashboard h5{
+.dashboard h6{
     margin-right: 50px;
-    color: #066325;
+    color: #ffffff;
     font-size: 20px;
     font-weight: 600;
     text-decoration: none;
